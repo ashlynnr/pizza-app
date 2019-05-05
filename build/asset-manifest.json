@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.42cc8b22.chunk.css",
+    "main.js": "/static/js/main.5c9736cf.chunk.js",
+    "main.js.map": "/static/js/main.5c9736cf.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.70dd96ee.chunk.js": "/static/js/2.70dd96ee.chunk.js",
+    "static/js/2.70dd96ee.chunk.js.map": "/static/js/2.70dd96ee.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a071d21df3e1eb057e5c84b0fb6f0775.js": "/precache-manifest.a071d21df3e1eb057e5c84b0fb6f0775.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.42cc8b22.chunk.css.map": "/static/css/main.42cc8b22.chunk.css.map",
+    "static/media/bell-peppers.webp": "/static/media/bell-peppers.6207c845.webp",
+    "static/media/cheese-pizza.webp": "/static/media/cheese-pizza.8dce9297.webp",
+    "static/media/chicken.webp": "/static/media/chicken.d2557a00.webp",
+    "static/media/gluten-free-crust.webp": "/static/media/gluten-free-crust.adbed319.webp",
+    "static/media/ham.webp": "/static/media/ham.f88f1a7a.webp",
+    "static/media/meatballs.webp": "/static/media/meatballs.5bd3917d.webp",
+    "static/media/mushrooms.webp": "/static/media/mushrooms.f845b247.webp",
+    "static/media/og-crust.webp": "/static/media/og-crust.2f163487.webp",
+    "static/media/pan-crust.webp": "/static/media/pan-crust.ee96838d.webp",
+    "static/media/pepperoni.webp": "/static/media/pepperoni.0474aa17.webp",
+    "static/media/red-onions.webp": "/static/media/red-onions.cff4d4a6.webp",
+    "static/media/sausage.webp": "/static/media/sausage.dc55c7e4.webp",
+    "static/media/spinach.webp": "/static/media/spinach.9a0b0311.webp",
+    "static/media/tomatoes.webp": "/static/media/tomatoes.efc8238e.webp"
+  }
+}

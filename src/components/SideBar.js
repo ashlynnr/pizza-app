@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Section from "./Section";
-import { connect } from "react-redux";
+import React, { Component } from "react"
+import styled from "styled-components"
+import Section from "./Section"
+import { connect } from "react-redux"
 import {
   selectCrust,
   selectSauce,
@@ -9,14 +9,14 @@ import {
   addTopping,
   removeTopping,
   getPizza
-} from "../redux/pizza/actions";
-import ingredients from "../utils/data";
-import { calculatePrice, formatPrice } from "../utils/Helpers";
+} from "../redux/pizza/actions"
+import ingredients from "../utils/data"
+import { calculatePrice, formatPrice } from "../utils/Helpers"
 
 class SideBar extends Component {
   render() {
-    const { pizza } = this.props;
-    const price = calculatePrice(pizza, ingredients);
+    const { pizza } = this.props
+    const price = calculatePrice(pizza, ingredients)
     return (
       <Container>
         <Section
@@ -41,14 +41,14 @@ class SideBar extends Component {
           onSelect={(isAdded, topping) => {
             isAdded
               ? this.props.addTopping(topping)
-              : this.props.removeTopping(topping);
+              : this.props.removeTopping(topping)
           }}
         />
         <PriceSection>
           <p>Total: {formatPrice(price)}</p>
         </PriceSection>
       </Container>
-    );
+    )
   }
 }
 
@@ -59,16 +59,16 @@ const mapDispatchToProps = {
   addTopping,
   removeTopping,
   getPizza
-};
+}
 
 export default connect(
   state => state,
   mapDispatchToProps
-)(SideBar);
+)(SideBar)
 
 const Container = styled.div`
   width: 100%;
-`;
+`
 
 const PriceSection = styled.div`
   background: ${props => props.theme.white};
@@ -78,4 +78,4 @@ const PriceSection = styled.div`
   background: ${props => props.theme.red};
   color: white;
   border-radius: 5px;
-`;
+`

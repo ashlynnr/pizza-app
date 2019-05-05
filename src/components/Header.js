@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Header = () => {
-  return <Container>Build a Pizza</Container>;
-};
+  return <Container>Build a Pizza</Container>
+}
 
-export default Header;
+export default Header
 
 const Container = styled.div`
   display: grid;
@@ -21,4 +21,4 @@ const Container = styled.div`
   @media (max-width: 1200px) {
     grid-template-columns: auto;
   }
-`;
+`

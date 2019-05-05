@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { connect } from "react-redux";
-import { getPizza } from "../redux/pizza/actions";
-import { adjustPrice } from "../redux/checkout/actions";
-import { formatPrice } from "../utils/Helpers";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { connect } from "react-redux"
+import { getPizza } from "../redux/pizza/actions"
+import { adjustPrice } from "../redux/checkout/actions"
+import { formatPrice } from "../utils/Helpers"
 
 const Section = ({ title, options, pizza, onSelect, type = "radio" }) => {
-  const [showOptions, setShowOptions] = useState(true);
+  const [showOptions, setShowOptions] = useState(true)
 
   const selectHandler = e => {
     if (type === "checkbox") {
-      onSelect(e.target.checked, e.target.value);
+      onSelect(e.target.checked, e.target.value)
     } else {
-      onSelect(e.target.value);
+      onSelect(e.target.value)
     }
-  };
+  }
 
   const checkIngredient = option => {
     return type === "checkbox"
       ? pizza && pizza[title.toLowerCase()].includes(option)
-      : pizza && pizza[title.toLowerCase()] === option;
-  };
+      : pizza && pizza[title.toLowerCase()] === option
+  }
 
   return (
     <Container>
@@ -49,24 +49,27 @@ const Section = ({ title, options, pizza, onSelect, type = "radio" }) => {
         </OptionsContainer>
       )}
     </Container>
-  );
-};
+  )
+}
 
 const mapDispatchToProps = {
   getPizza,
   adjustPrice
-};
+}
 
 export default connect(
   state => state,
   mapDispatchToProps
-)(Section);
+)(Section)
 
 const Container = styled.div`
   background: ${props => props.theme.white};
   margin-bottom: 20px;
   border-radius: 5px;
-`;
+  -webkit-box-shadow: 6px 6px 15px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 15px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 15px -4px rgba(0, 0, 0, 0.75);
+`
 
 const Header = styled.button`
   width: 100%;
@@ -76,7 +79,7 @@ const Header = styled.button`
   box-shadow: 0 2px 4px -4px black;
   color: white;
   outline: none;
-`;
+`
 
 const OptionsContainer = styled.div`
   display: grid;
@@ -87,9 +90,9 @@ const OptionsContainer = styled.div`
   @media (max-width: 500px) {
     padding: 5px;
   }
-`;
+`
 
 const CheckboxContainer = styled.div`
   width: 100%;
   margin-bottom: 10px;
-`;
+`
