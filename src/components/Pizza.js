@@ -1,27 +1,27 @@
-import React from "react";
-import styled from "styled-components";
-import { connect } from "react-redux";
-import panCrust from "../images/pan-crust.webp";
-import glutenFreeCrust from "../images/gluten-free-crust.webp";
-import originalCrust from "../images/og-crust.webp";
-import cheese from "../images/cheese-pizza.webp";
-import bellPeppers from "../images/bell-peppers.webp";
-import chicken from "../images/chicken.webp";
-import ham from "../images/ham.webp";
-import meatballs from "../images/meatballs.webp";
-import mushrooms from "../images/mushrooms.webp";
-import pepperoni from "../images/pepperoni.webp";
-import redOnions from "../images/red-onions.webp";
-import sausage from "../images/sausage.webp";
-import spinach from "../images/spinach.webp";
-import tomatoes from "../images/tomatoes.webp";
+import React from "react"
+import styled from "styled-components"
+import { connect } from "react-redux"
+import panCrust from "../images/pan-crust.webp"
+import glutenFreeCrust from "../images/gluten-free-crust.webp"
+import originalCrust from "../images/og-crust.webp"
+import cheese from "../images/cheese-pizza.webp"
+import bellPeppers from "../images/bell-peppers.webp"
+import chicken from "../images/chicken.webp"
+import ham from "../images/ham.webp"
+import meatballs from "../images/meatballs.webp"
+import mushrooms from "../images/mushrooms.webp"
+import pepperoni from "../images/pepperoni.webp"
+import redOnions from "../images/red-onions.webp"
+import sausage from "../images/sausage.webp"
+import spinach from "../images/spinach.webp"
+import tomatoes from "../images/tomatoes.webp"
 
 const Pizza = props => {
   const renderIngredient = (image, ingredient) => {
     if (props.pizza.toppings.includes(ingredient)) {
-      return image;
+      return image
     }
-  };
+  }
 
   return (
     <Container>
@@ -45,10 +45,10 @@ const Pizza = props => {
       )}
       {renderIngredient(<Image src={tomatoes} alt="" />, "roma-tomatoes")}
     </Container>
-  );
-};
+  )
+}
 
-export default connect(state => state)(Pizza);
+export default connect(state => state)(Pizza)
 
 const Container = styled.div`
   position: relative;
@@ -56,7 +56,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Image = styled.img`
   position: absolute;
@@ -67,4 +67,4 @@ const Image = styled.img`
   margin-right: auto;
   width: 100%;
   max-width: 500px;
-`;
+`

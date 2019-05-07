@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import Section from "./Section"
+import Modal from "./Modal"
 import { connect } from "react-redux"
 import {
   selectCrust,
@@ -8,7 +9,8 @@ import {
   selectCheese,
   addTopping,
   removeTopping,
-  getPizza
+  getPizza,
+  deselectAll
 } from "../redux/pizza/actions"
 import ingredients from "../utils/data"
 import { calculatePrice, formatPrice } from "../utils/Helpers"
@@ -46,6 +48,11 @@ class SideBar extends Component {
         />
         <PriceSection>
           <p>Total: {formatPrice(price)}</p>
+          <Modal
+            pizza={pizza}
+            price={formatPrice(price)}
+            newOrder={this.props.deselectAll}
+          />
         </PriceSection>
       </Container>
     )
@@ -58,7 +65,8 @@ const mapDispatchToProps = {
   selectCheese,
   addTopping,
   removeTopping,
-  getPizza
+  getPizza,
+  deselectAll
 }
 
 export default connect(
@@ -68,14 +76,16 @@ export default connect(
 
 const Container = styled.div`
   width: 100%;
+  font-family: ${props => props.theme.fontFamily};
 `
 
 const PriceSection = styled.div`
-  background: ${props => props.theme.white};
+  /* background: ${props => props.theme.white}; */
   padding: 20px 40px;
   text-align: center;
   font-weight: 700;
   background: ${props => props.theme.red};
   color: white;
   border-radius: 5px;
+  height: 75px;
 `

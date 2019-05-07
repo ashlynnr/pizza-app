@@ -1,11 +1,10 @@
-import pizzaReducer from "./pizza";
-import checkoutReducer from "./checkout";
-import { createStore, combineReducers } from "redux";
+import pizzaReducer from "./pizza"
+import checkoutReducer from "./checkout"
+import { createStore, combineReducers } from "redux"
 
 // console.log(pizzaReducer, checkoutReducer);
 const rootReducer = combineReducers({
-  pizza: pizzaReducer,
-  checkout: checkoutReducer
-});
+  pizza: pizzaReducer
+})
 
-export default createStore(rootReducer, {});
+export default createStore(rootReducer, {})

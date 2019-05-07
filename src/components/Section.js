@@ -66,9 +66,7 @@ const Container = styled.div`
   background: ${props => props.theme.white};
   margin-bottom: 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 6px 6px 15px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 6px 6px 15px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 6px 6px 15px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 15px -4px black;
 `
 
 const Header = styled.button`

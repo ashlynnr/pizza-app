@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import SideBar from "./SideBar";
-import Pizza from "./Pizza";
-import styled from "styled-components";
+import React, { Component } from "react"
+import SideBar from "./SideBar"
+import Pizza from "./Pizza"
+
+import styled from "styled-components"
 
 export default class Body extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class Body extends Component {
         <SideBar />
         <Pizza />
       </Container>
-    );
+    )
   }
 }
 
@@ -23,4 +24,4 @@ const Container = styled.div`
   @media (max-width: 1200px) {
     grid-template-columns: auto;
   }
-`;
+`
