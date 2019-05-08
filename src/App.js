@@ -32,10 +32,9 @@ const Inner = styled.div`
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: linear-gradient(to left bottom, #fdeded, #f0e3e3, #e3dada, #d7d0d0, #cac7c7);
+    background: #f0e3e3;
     color: #4E4646;
     font-weight: 500;
-    padding: 100px 0;
   }
   p {
     font-size: 20px;
@@ -54,6 +53,11 @@ const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 500px) {
       font-size: 12px;
+    }
+  }
+  button {
+    :hover {
+      cursor: pointer;
     }
   }
 `

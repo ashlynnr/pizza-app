@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { connect } from "react-redux"
 import { getPizza } from "../redux/pizza/actions"
-import { adjustPrice } from "../redux/checkout/actions"
 import { formatPrice } from "../utils/Helpers"
 
 const Section = ({ title, options, pizza, onSelect, type = "radio" }) => {
@@ -53,8 +52,7 @@ const Section = ({ title, options, pizza, onSelect, type = "radio" }) => {
 }
 
 const mapDispatchToProps = {
-  getPizza,
-  adjustPrice
+  getPizza
 }
 
 export default connect(
@@ -64,9 +62,8 @@ export default connect(
 
 const Container = styled.div`
   background: ${props => props.theme.white};
-  margin-bottom: 20px;
   border-radius: 5px;
-  box-shadow: 6px 6px 15px -4px black;
+  box-shadow: 0 6px 15px -4px black;
 `
 
 const Header = styled.button`

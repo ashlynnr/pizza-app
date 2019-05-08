@@ -1,5 +1,4 @@
 import pizzaReducer from "./pizza"
-import checkoutReducer from "./checkout"
 import { createStore, combineReducers } from "redux"
 
 // console.log(pizzaReducer, checkoutReducer);

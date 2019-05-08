@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import Section from "./Section"
-import Modal from "./Modal"
 import { connect } from "react-redux"
 import {
   selectCrust,
@@ -14,8 +13,14 @@ import {
 } from "../redux/pizza/actions"
 import ingredients from "../utils/data"
 import { calculatePrice, formatPrice } from "../utils/Helpers"
+import CheckoutModal from "./CheckoutModal"
+import { Button } from "./CheckoutModal"
 
 class SideBar extends Component {
+  state = {
+    showModal: false
+  }
+
   render() {
     const { pizza } = this.props
     const price = calculatePrice(pizza, ingredients)
@@ -48,12 +53,18 @@ class SideBar extends Component {
         />
         <PriceSection>
           <p>Total: {formatPrice(price)}</p>
-          <Modal
+          <Button onClick={() => this.setState({ showModal: true })}>
+            Checkout
+          </Button>
+        </PriceSection>
+        {this.state.showModal && (
+          <CheckoutModal
+            closeModal={() => this.setState({ showModal: false })}
             pizza={pizza}
             price={formatPrice(price)}
             newOrder={this.props.deselectAll}
           />
-        </PriceSection>
+        )}
       </Container>
     )
   }
@@ -80,12 +91,13 @@ const Container = styled.div`
 `
 
 const PriceSection = styled.div`
-  /* background: ${props => props.theme.white}; */
   padding: 20px 40px;
   text-align: center;
   font-weight: 700;
   background: ${props => props.theme.red};
   color: white;
   border-radius: 5px;
-  height: 75px;
+  display: grid;
+  grid-gap: 10px;
+  justify-items: center;
 `
