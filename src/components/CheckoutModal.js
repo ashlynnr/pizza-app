@@ -1,10 +1,10 @@
 import React, { useRef } from "react"
 import styled from "styled-components"
-import { useClickAway } from "react-use"
+import { useOutsideClick } from "react-use"
 
 export default function CheckoutModal({ closeModal, pizza, price, newOrder }) {
   const modalRef = useRef(null)
-  useClickAway(modalRef, closeModal)
+  useOutsideClick(modalRef, closeModal)
   const formatIngredient = ingredient => {
     return ingredient
       .replace(/-/g, " ")
